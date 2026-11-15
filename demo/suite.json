@@ -1,0 +1,181 @@
+{
+  "schema": 1,
+  "cases": [
+    {
+      "id": "belegt",
+      "vault": "fiction/vault.json",
+      "task": "fiction/tasks/standard.json",
+      "draft": "fiction/drafts/belegt.json",
+      "expected_status": "RELEASED",
+      "expected_issue": null,
+      "basis": "Fiktiver Funktionstest",
+      "expected_answer": [
+        {
+          "subject": "lager-nord",
+          "field": "gesamt",
+          "as_of": "2026-01-31",
+          "value": 20
+        },
+        {
+          "subject": "lager-nord",
+          "field": "status",
+          "as_of": "2026-01-31",
+          "value": "geschlossen"
+        },
+        {
+          "subject": "lager-nord",
+          "field": "inventurtag",
+          "as_of": "2026-01-31",
+          "value": "2026-01-31"
+        }
+      ]
+    },
+    {
+      "id": "falsche-zahl",
+      "vault": "fiction/vault.json",
+      "task": "fiction/tasks/standard.json",
+      "draft": "fiction/drafts/falsche-zahl.json",
+      "expected_status": "BLOCKED",
+      "expected_issue": "VALUE_MISMATCH",
+      "basis": "Fiktiver Funktionstest",
+      "expected_answer": null
+    },
+    {
+      "id": "erfundene-quelle",
+      "vault": "fiction/vault.json",
+      "task": "fiction/tasks/standard.json",
+      "draft": "fiction/drafts/erfundene-quelle.json",
+      "expected_status": "BLOCKED",
+      "expected_issue": "UNKNOWN_CITATION",
+      "basis": "Fiktiver Funktionstest",
+      "expected_answer": null
+    },
+    {
+      "id": "falscher-stichtag",
+      "vault": "fiction/vault.json",
+      "task": "fiction/tasks/standard.json",
+      "draft": "fiction/drafts/falsches-datum.json",
+      "expected_status": "BLOCKED",
+      "expected_issue": "IRRELEVANT_CITATION",
+      "basis": "Fiktiver Funktionstest",
+      "expected_answer": null
+    },
+    {
+      "id": "fehlender-beleg",
+      "vault": "fiction/vault.json",
+      "task": "fiction/tasks/standard.json",
+      "draft": "fiction/drafts/ohne-beleg.json",
+      "expected_status": "BLOCKED",
+      "expected_issue": "MISSING_CITATION",
+      "basis": "Ein Pflichtclaim enthält keine Belegstelle.",
+      "expected_answer": null
+    },
+    {
+      "id": "unvollstaendig",
+      "vault": "fiction/vault.json",
+      "task": "fiction/tasks/standard.json",
+      "draft": "fiction/drafts/unvollstaendig.json",
+      "expected_status": "BLOCKED",
+      "expected_issue": "MISSING_CLAIM",
+      "basis": "Fiktiver Funktionstest",
+      "expected_answer": null
+    },
+    {
+      "id": "freigabe-spoof",
+      "vault": "fiction/vault.json",
+      "task": "fiction/tasks/standard.json",
+      "draft": "fiction/drafts/freigabe-spoof.json",
+      "expected_status": "BLOCKED",
+      "expected_issue": "INVALID_SCHEMA",
+      "basis": "Fiktiver Funktionstest",
+      "expected_answer": null
+    },
+    {
+      "id": "falscher-typ",
+      "vault": "fiction/vault.json",
+      "task": "fiction/tasks/standard.json",
+      "draft": "fiction/drafts/falscher-typ.json",
+      "expected_status": "BLOCKED",
+      "expected_issue": "INVALID_SCHEMA",
+      "basis": "Ein Wahrheitswert steht in einem Zahlenfeld.",
+      "expected_answer": null
+    },
+    {
+      "id": "pflichtfeld-fehlt",
+      "vault": "fiction/vault.json",
+      "task": "fiction/tasks/standard.json",
+      "draft": "fiction/drafts/pflichtfeld-fehlt.json",
+      "expected_status": "BLOCKED",
+      "expected_issue": "INVALID_SCHEMA",
+      "basis": "Das Pflichtfeld für Belege fehlt.",
+      "expected_answer": null
+    },
+    {
+      "id": "widerspruch",
+      "vault": "fiction/vault.json",
+      "task": "fiction/tasks/widerspruch.json",
+      "draft": "fiction/drafts/belegt.json",
+      "expected_status": "BLOCKED",
+      "expected_issue": "SOURCE_CONFLICT",
+      "basis": "Fiktiver Funktionstest",
+      "expected_answer": null
+    },
+    {
+      "id": "falsche-summe",
+      "vault": "fiction/vault.json",
+      "task": "fiction/tasks/falsche-summe.json",
+      "draft": "fiction/drafts/belegt.json",
+      "expected_status": "BLOCKED",
+      "expected_issue": "TOTAL_CONFLICT",
+      "basis": "Fiktiver Funktionstest",
+      "expected_answer": null
+    },
+    {
+      "id": "quellendatei-fehlt",
+      "vault": "fiction/vault.json",
+      "task": "fiction/tasks/fehlende-datei.json",
+      "draft": "fiction/drafts/belegt.json",
+      "expected_status": "CHECK_ERROR",
+      "expected_issue": "FILE_UNAVAILABLE",
+      "basis": "Die für den Prüfauftrag freigegebene Belegdatei fehlt.",
+      "expected_answer": null
+    },
+    {
+      "id": "quellenhash",
+      "vault": "fiction/vault.json",
+      "task": "fiction/tasks/integritaet.json",
+      "draft": "fiction/drafts/belegt.json",
+      "expected_status": "CHECK_ERROR",
+      "expected_issue": "HASH_MISMATCH",
+      "basis": "Fiktiver Funktionstest",
+      "expected_answer": null
+    },
+    {
+      "id": "historischer-stichtag",
+      "vault": "fiction/vault.json",
+      "task": "fiction/tasks/historischer-stichtag.json",
+      "draft": "fiction/drafts/historischer-stichtag.json",
+      "expected_status": "RELEASED",
+      "expected_issue": null,
+      "basis": "Früherer Inventurstand mit eigenem Stichtag.",
+      "expected_answer": [
+        {
+          "subject": "lager-nord",
+          "field": "status",
+          "as_of": "2025-12-31",
+          "value": "offen"
+        }
+      ]
+    },
+    {
+      "id": "unbelegte-verallgemeinerung",
+      "vault": "fiction/vault.json",
+      "task": "fiction/tasks/standard.json",
+      "draft": "fiction/drafts/unbelegte-verallgemeinerung.json",
+      "expected_status": "BLOCKED",
+      "expected_issue": "VALUE_MISMATCH",
+      "basis": "Ein belegter Stichtagswert wird zu einer unbefristeten Behauptung.",
+      "expected_answer": null
+    }
+  ]
+}

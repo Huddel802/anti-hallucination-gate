@@ -1,0 +1,48 @@
+{
+  "schema": 1,
+  "claims": [
+    {
+      "id": "menge",
+      "subject": "lager-nord",
+      "field": "gesamt",
+      "as_of": "2026-01-31",
+      "value": 20,
+      "evidence": [
+        {
+          "source": "bestand",
+          "line": 1
+        },
+        {
+          "source": "bestand",
+          "line": 2
+        }
+      ]
+    },
+    {
+      "id": "status",
+      "subject": "lager-nord",
+      "field": "status",
+      "as_of": "2026-01-31",
+      "value": "geschlossen",
+      "evidence": [
+        {
+          "source": "bestand",
+          "line": 3
+        }
+      ]
+    },
+    {
+      "id": "inventurtag",
+      "subject": "lager-nord",
+      "field": "inventurtag",
+      "as_of": "2026-01-31",
+      "value": "2026-01-31",
+      "evidence": [
+        {
+          "source": "bestand",
+          "line": 4
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "schema": 1,
+  "request": "Prüfe Stückzahl gesamt, Lagerstatus und Inventurdatum für Lager Nord zum 31. Januar 2026.",
+  "allowed_sources": [
+    "bestand",
+    "summe",
+    "geaendert"
+  ],
+  "targets": [
+    {
+      "subject": "lager-nord",
+      "field": "gesamt",
+      "as_of": "2026-01-31"
+    },
+    {
+      "subject": "lager-nord",
+      "field": "status",
+      "as_of": "2026-01-31"
+    },
+    {
+      "subject": "lager-nord",
+      "field": "inventurtag",
+      "as_of": "2026-01-31"
+    }
+  ]
+}

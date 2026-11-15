@@ -1,0 +1,76 @@
+{
+  "schema": 1,
+  "fields": [
+    {
+      "id": "typ-a",
+      "kind": "integer",
+      "unit": "Stück"
+    },
+    {
+      "id": "typ-b",
+      "kind": "integer",
+      "unit": "Stück"
+    },
+    {
+      "id": "gesamt",
+      "kind": "integer",
+      "unit": "Stück",
+      "sum_of": [
+        "typ-a",
+        "typ-b"
+      ]
+    },
+    {
+      "id": "status",
+      "kind": "text"
+    },
+    {
+      "id": "inventurtag",
+      "kind": "date"
+    }
+  ],
+  "sources": [
+    {
+      "id": "bestand",
+      "title": "Fiktiver Snapshot bestand",
+      "origin": "Künstliche Demo ohne Realweltbezug",
+      "captured_on": "2026-01-31",
+      "sha256": "08e7cfe43553cfd131e220aefe36490c40b438366baff0957cbbd061d0dbdf5a"
+    },
+    {
+      "id": "summe",
+      "title": "Fiktiver Snapshot summe",
+      "origin": "Künstliche Demo ohne Realweltbezug",
+      "captured_on": "2026-01-31",
+      "sha256": "b50e3078686d927f62db04d8507309fa4f61c5b6d641cc18a8aafd4093fe8819"
+    },
+    {
+      "id": "widerspruch",
+      "title": "Fiktiver Snapshot widerspruch",
+      "origin": "Künstliche Demo ohne Realweltbezug",
+      "captured_on": "2026-01-31",
+      "sha256": "2350d5e6abebc46de6b41e9edc73157a6cd60dbbced016b802e470632add543d"
+    },
+    {
+      "id": "falsche-summe",
+      "title": "Fiktiver Snapshot falsche-summe",
+      "origin": "Künstliche Demo ohne Realweltbezug",
+      "captured_on": "2026-01-31",
+      "sha256": "f83981c4ebf13db4f91271660c4fe64f7b540f4dbf717004778e272b5c57a792"
+    },
+    {
+      "id": "fehlt",
+      "title": "Fiktiver Snapshot fehlt",
+      "origin": "Künstliche Demo ohne Realweltbezug",
+      "captured_on": "2026-01-31",
+      "sha256": "08e7cfe43553cfd131e220aefe36490c40b438366baff0957cbbd061d0dbdf5a"
+    },
+    {
+      "id": "geaendert",
+      "title": "Fiktiver Snapshot geaendert",
+      "origin": "Künstliche Demo ohne Realweltbezug",
+      "captured_on": "2026-01-31",
+      "sha256": "08e7cfe43553cfd131e220aefe36490c40b438366baff0957cbbd061d0dbdf5a"
+    }
+  ]
+}

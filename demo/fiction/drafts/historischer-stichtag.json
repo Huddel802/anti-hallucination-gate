@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "claims": [
+    {
+      "id": "status",
+      "subject": "lager-nord",
+      "field": "status",
+      "as_of": "2025-12-31",
+      "value": "offen",
+      "evidence": [
+        {
+          "source": "bestand",
+          "line": 5
+        }
+      ]
+    }
+  ]
+}

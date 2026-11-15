@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "request": "Prüfe den Lagerstatus zum 31. Dezember 2025.",
+  "allowed_sources": [
+    "bestand"
+  ],
+  "targets": [
+    {
+      "subject": "lager-nord",
+      "field": "status",
+      "as_of": "2025-12-31"
+    }
+  ]
+}
