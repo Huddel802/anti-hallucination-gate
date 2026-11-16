@@ -72,3 +72,7 @@ When reporting a bug, include the tool version, Python version, issue code, and 
 - The gate controls its own structured output. Any model-generated prose or later transformation that reaches the user requires its own verification path.
 - Audit files are written atomically to local storage. A user with write access can alter them. Keep the corresponding input versions for later review.
 - A wrong or stale source may still support a claim under these checks. The regression suite cannot establish a real-world hallucination rate.
+
+## License
+
+This project is available under the [MIT License](LICENSE).
